@@ -8,9 +8,16 @@ class CarsController < ApplicationController
       end
      
     def new
+      if current_user.role != 1
+        redirect_to('/cars')
+      end
     end
     
     def create
+      if current_user.role != 1
+        redirect_to('/cars')
+      end
+
       @car = Car.new(car_params)
        
       @car.save

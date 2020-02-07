@@ -1,3 +1,7 @@
 <h1>Welcome, to the big list of cars!</h1>
-<td><a href="/cars">View car list</a></td>
+<td>
+<a href="/cars">View car list</a>
+</td>
+<% if current_user.role == 1 %> 
 <td><a href="/cars/new">Create new car</a></td>
+<% end %>
