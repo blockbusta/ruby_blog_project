@@ -1,20 +1,50 @@
 @import "bootstrap";
 
 body {
-    background-color: rgb(173, 218, 233);
+    background-color: rgb(203, 226, 255);
     padding-left:50px;
-    padding-top:25px;
+    padding-top:35px;
     padding-right:50px;
     padding-bottom:25px;
+    
     h1 {
-        background-color: rgb(107, 189, 221);
+        padding-top:35px;
+        background-color: rgb(80, 183, 252);
+        border-style: solid;
+        border-radius: 12px;
+        border-width: thin;
+        padding: 15px;
+
       }
       
       div {
-        background-color: rgb(117, 208, 238);
+        background-color: rgb(161, 191, 201);
+        padding: 15px;
       }
       
       p {
-        background-color: rgb(119, 212, 235);
+        background-color: rgb(211, 239, 247);
+        border-radius: 8px;
+        border-width: thick;
+        padding: 10px;
+      }
+      table, th, td, tr{
+        border: 1px solid black;
+        border-radius: 10px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        text-align: center;
+        tr:hover {background-color: #90c5f7;}
+      }
+      table {
+        width: 40%;
+        border-radius: 10px;
+      }
+      
+      th {
+        height: 10px;
+        border-radius: 10px;
       }
     }

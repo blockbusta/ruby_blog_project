@@ -1,3 +1,5 @@
+<h1> Car Details: </h1>
+
 <p>
 <strong>Title:</strong>
 <%= @car.title %>
@@ -7,3 +9,13 @@
 <strong>Description:</strong>
 <%= @car.description %>
 </p>
+
+<p>
+<strong>Created By:</strong>
+<%= @car.created_by %>
+</p>
+
+<p><a href="/cars">View car list</a></p>
+<p><% if current_user.role == 1 %> 
+<a href="/cars/new">Create new car</a></td>
+<% end %></p>
