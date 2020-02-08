@@ -19,7 +19,7 @@ class CarsController < ApplicationController
       end
 
       @car = Car.new(car_params)
-       
+      @car.created_by = current_user.username
       @car.save
         redirect_to @car
     end

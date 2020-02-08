@@ -1,15 +1,16 @@
+<h1>Create a new car</h1>
 <%= form_with scope: :car, url: cars_path, local: true do |form| %>
     <p>
-      <%= form.label :title %><br>
+      <%= form.label :title %> (required)<br>
       <%= form.text_field :title %>
     </p>
    
     <p>
-      <%= form.label :description %><br>
+      <%= form.label :description %> (optional)<br>
       <%= form.text_area :description %>
     </p>
    
     <p>
-      <%= form.submit %>
+      <%= form.submit %> <a href="/cars">View car list</a>
     </p>
   <% end %>

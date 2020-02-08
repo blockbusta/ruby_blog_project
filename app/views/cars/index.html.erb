@@ -3,7 +3,6 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Description</th>
     <th>Creation Date</th>
     <th>Created By</th>
     <th></th>
@@ -12,10 +11,13 @@
   <% @cars.each do |car| %>
     <tr>
       <td><%= car.title %></td>
-      <td><%= car.description %></td>
       <td><%= car.created_at.strftime("%d/%m/%Y at %H:%M") %></td>
       <td><%= car.created_by %></td>
       <td><%= link_to 'Show', car_path(car) %></td>
     </tr>
   <% end %>
 </table>
+
+<p><% if current_user.role == 1 %> 
+<a href="/cars/new">Create new car</a></td>
+<% end %></p>

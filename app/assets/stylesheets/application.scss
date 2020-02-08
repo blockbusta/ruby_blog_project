@@ -1,19 +1,30 @@
 @import "bootstrap";
 
 body {
-    background-color: rgb(203, 226, 255);
+  a:link, a:visited {
+    background-color: #444444;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  a:hover, a:active {
+    background-color: rgb(36, 36, 36);
+  }
+    background-color: rgb(64, 163, 255);
     padding-left:50px;
-    padding-top:35px;
     padding-right:50px;
-    padding-bottom:25px;
+    padding-top:35px;
+    padding-bottom:35px;
     
     h1 {
-        padding-top:35px;
-        background-color: rgb(80, 183, 252);
+        background-color: rgb(115, 197, 252);
         border-style: solid;
-        border-radius: 12px;
-        border-width: thin;
-        padding: 15px;
+        border-radius: 18px;
+        border-width: 2px;
+        padding: 12px;
 
       }
       
@@ -23,28 +34,39 @@ body {
       }
       
       p {
-        background-color: rgb(211, 239, 247);
-        border-radius: 8px;
+        background-color: rgb(230, 230, 230);
+        border-radius: 18px;
         border-width: thick;
-        padding: 10px;
+        padding: 16px;
+        box-sizing: border-box;
+        width: fit-content;
       }
       table, th, td, tr{
-        border: 1px solid black;
-        border-radius: 10px;
+        border: 1px dotted rgb(0, 47, 109);
+        border-radius: 5px;
         padding-left: 12px;
         padding-right: 12px;
         padding-bottom: 6px;
         padding-top: 6px;
         text-align: center;
-        tr:hover {background-color: #90c5f7;}
+        tr:hover {background-color: #bcd8f3;}
       }
       table {
-        width: 40%;
-        border-radius: 10px;
+        border-radius: 5px;
+        color: rgb(2, 19, 24);
+        background-color: rgb(131, 188, 235);
+        width: 70%;
       }
       
       th {
+        border-radius: 5px;
         height: 10px;
-        border-radius: 10px;
       }
+      td {
+        border-radius: 5px;
+      }
+      tr {
+        border-radius: 5px;
+      }
+      form label {font-weight:bold}
     }
