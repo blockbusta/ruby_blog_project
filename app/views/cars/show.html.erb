@@ -3,14 +3,18 @@
 <table>
   <tr>
     <th>Title</th>
+    <% if @car.description != nil %>
     <th>Description</th>
+    <% end %>
     <th>Created By</th>
     <th>Photo</th>
   </tr>
  
     <tr>
       <td><%= @car.title %></td>
+      <% if @car.description != nil %>
       <td><%= @car.description %></td>
+      <% end %>
       <td><%= @car.created_by %></td>
       <td><%= image_tag @car.avatar.url(:medium) %></td>
     </tr>
