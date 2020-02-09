@@ -14,11 +14,6 @@
 </p>
 
   <p class="field">
-    <%= f.label :avatar %><br />
-    <%= f.file_field :avatar %>
-  </p>
-
-  <p class="field">
     <%= f.label :role %><br />
     <%= f.select :role, User.roles_for_select, :prompt => 'Select' %>
   </p>

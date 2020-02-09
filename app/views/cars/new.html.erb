@@ -2,8 +2,8 @@
 <%= form_with scope: :car, url: cars_path, local: true do |form| %>
     <p>
       <%= form.label :title %> (required)<br>
-      <%= form.text_field :title %>
-    </p>
+      <%= form.text_field :title, required: true %>
+      </p>
    
     <p>
       <%= form.label :description %> (optional)<br>
@@ -12,10 +12,10 @@
 
     <p class="field">
     <%= form.label :photo %><br />
-    <%= form.file_field :avatar %>
+    <%= form.file_field :avatar, as: :file %>
   </p> 
 
     <p>
-      <%= form.submit %> <a href="/cars">View car list</a>
+      <%= form.submit %> <%= link_to 'Back to car list', cars_path %>
     </p>
   <% end %>
