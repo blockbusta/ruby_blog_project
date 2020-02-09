@@ -15,6 +15,11 @@
 <%= @car.created_by %>
 </p>
 
+<p>
+<strong>Photo:</strong>
+<%= image_tag @car.avatar.url(:thumb) %>
+</p>
+
 <p><a href="/cars">View car list</a>
  <% if current_user.role == 1 %> 
 <a href="/cars/new">Create new car</a></td>

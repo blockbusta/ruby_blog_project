@@ -1,3 +1,4 @@
 class Car < ApplicationRecord
-
+    has_attached_file :avatar, styles: { medium: "300x300>", thumb: "50x50>" }, default_url: "/images/missing.png"
+    validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/, validate_media_type: false
 end

@@ -9,7 +9,12 @@
       <%= form.label :description %> (optional)<br>
       <%= form.text_area :description %>
     </p>
-   
+
+    <p class="field">
+    <%= form.label :photo %><br />
+    <%= form.file_field :avatar %>
+  </p> 
+
     <p>
       <%= form.submit %> <a href="/cars">View car list</a>
     </p>
