@@ -1,13 +1,14 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable, 
+  devise :database_authenticatable, :registerable, :confirmable, 
        :rememberable, :validatable
 
   enum roles: [:user, :admin]
 
   def self.role_by_id id
-    roles.key(id).humanize
+    role = roles.key(id)
+    role ? role.humanize : 'Not defined'
   end
 
   def self.roles_for_select

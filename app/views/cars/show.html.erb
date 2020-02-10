@@ -3,8 +3,8 @@
 <table>
   <tr>
     <th>Title</th>
-    <% if @car.description != nil %>
-    <th>Description</th>
+    <% if @car.description.present? %>
+      <th>Description</th>
     <% end %>
     <th>Created By</th>
     <th>Photo</th>
@@ -12,8 +12,8 @@
  
     <tr>
       <td><%= @car.title %></td>
-      <% if @car.description != nil %>
-      <td><%= @car.description %></td>
+      <% if @car.description.present?  %>
+        <td><%= @car.description %></td>
       <% end %>
       <td><%= @car.created_by %></td>
       <td><%= image_tag @car.avatar.url(:medium) %></td>
@@ -21,6 +21,6 @@
 </table>
 
 <p><a href="/cars">View car list</a>
- <% if current_user.role == 1 %> 
-<a href="/cars/new">Create new car</a></td>
+<% if current_user.role == 1 %> 
+  <a href="/cars/new">Create new car</a></td>
 <% end %></p>
