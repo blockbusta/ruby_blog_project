@@ -27,10 +27,10 @@
 | app\models\car.rb | defines validations for car, that includes: title exists (which is also validated on client side), avatar (photo) exists, that the uploaded photo is an image mime type, with the extensions jpeg,gif,png |
 | app\models\user.rb | defines user validations, that includes: devise (user can register, be confirmed, be remembered, be validated), defines an array "role" that is either user or admin, defines role for user, defines roles for select box using humanize (for capitalization), and defines that user does not need to be confirmed via email |
 
-### Route
+### Routes
 | filename | description |
 | :---         |     :---:      |
-| config\routes.rb | ruby routes file: defines the resources (articles and cars), defines the controller for devise gem to be users, includes a redirection to the index page from both root and users |
+| config\routes.rb | defines the resources cars & articles (resource is a way to route http requests to ruby actions in the specified controller, without specifing each individual request type), generates all needed routes for devise, includes a redirection to the index page from both root and users |
 
 ### Views: Index
 | filename | description |
