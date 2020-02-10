@@ -14,8 +14,8 @@
 ### Controllers
 | filename | description |
 | :---         |     :---:      |
-| app\controllers\application_controller.rb | ? |
-| app\controllers\articles_controller.rb | contains the methods: index (for displaying all articles in database) show (for displaying a specific article id, provided in article_params) new (creates a new unsaved record, and renders the form) create (inserts the user input to the database) article_params (defines what basic parameters each article has) |
+| app\controllers\application_controller.rb | defines that user must be logged in order to access the web app, defines the required fields for user during sign-up or profile-edit |
+| app\controllers\articles_controller.rb | contains the methods: index (for displaying all articles in database) show (for displaying a specific article id, provided in article_params) new (defines "created_by" value to be set according to current users' username, creates a new unsaved record, and renders the form) create (inserts the user input to the database) article_params (defines what basic parameters each article has) |
 | app\controllers\cars_controller.rb | contains the methods: index (for displaying all cars in database), show (for displaying a specific car details given provided id from car_params), new (creates a new unsaved record and generates the create car form in the views), create (inserts the user input to the database), car_params (defines the car parameters) |
 | app\controllers\welcome_controller.rb | defines method "index" which redirects the browser to **welcome\index.html.erb** upon reaching localhost:3000 |
 
@@ -59,6 +59,3 @@
 | app\views\devise\registrations\edit.html.erb | edit profile page for current user |
 | app\views\devise\sessions\new.html.erb | log in page for existing user |
 | app\views\layouts\application.html.erb | top navbar that displays either current users username if signed in, or 'sign up' and 'log in' links |
-
-
-
