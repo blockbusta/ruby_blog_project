@@ -11,9 +11,29 @@
 
 ## Structure
 
+### Views: Index
+| filename | description |
+| :---         |     :---:      |
+| app\views\welcome\index.html.erb | index page displayed when requesting localhost:3000 |
+
+### Views: Articles
+| filename | description |
+| :---         |     :---:      |
+| app\views\articles\index.html.erb | displays all cars in database |
+| app\views\articles\new.html.erb | create a new article |
+| app\views\articles\show.html.erb | displays a specific article (provided params id) |
+
 ### Views: Cars
 | filename | description |
 | :---         |     :---:      |
 | app\views\cars\index.html.erb | displays all cars in database |
 | app\views\cars\new.html.erb | create a new car |
 | app\views\cars\show.html.erb | displays a specific car (provided params id) |
+
+### Views: Devise
+| filename | description |
+| :---         |     :---:      |
+| app\views\devise\registrations\new.html.erb | sign up for a new user |
+| app\views\devise\registrations\edit.html.erb | edit profile page for current user |
+| app\views\devise\sessions\new.html.erb | log in page for existing user |
+| app\views\layouts\application.html.erb | top navbar that displays either current users username if signed in, or 'sign up' and 'log in' links |
