@@ -10,9 +10,10 @@
 6. app should be visible at <strong>localhost:3000</strong>
 
 ## Car List Structure
+
 ### Views: Cars
 | filename | description |
 | :---         |     :---:      |
-| app\views\cars\<strong>index.html.erb</strong> | displays all cars in database |
-| app\views\cars\<strong>new.html.erb</strong> | create a new car |
-| app\views\cars\<strong>show.html.erb</strong> | displays a specific car (provided params id) |
+| app\views\cars\**index.html.erb** | displays all cars in database |
+| app\views\cars\**new.html.erb** | create a new car |
+| app\views\cars\**show.html.erb** | displays a specific car (provided params id) |
