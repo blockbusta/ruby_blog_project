@@ -15,19 +15,18 @@
 | filename | description |
 | :---         |     :---:      |
 | app\controllers\application_controller.rb | ? |
-| app\controllers\articles_controller.rb | controller for articles, contains the methods: index (for displaying all articles in database) show (for displaying a specific article id, provided in article_params) new (which leads to new article page) create (which inserts a new articles' values into database) article_params (defines what basic parameters each article has) |
-| app\controllers\cars_controller.rb | ? |
-| app\controllers\pages_controller.rb | ? |
-| app\controllers\welcome_controller.rb | ? |
+| app\controllers\articles_controller.rb | contains the methods: index (for displaying all articles in database) show (for displaying a specific article id, provided in article_params) new (creates a new unsaved record, and renders the form) create (inserts the user input to the database) article_params (defines what basic parameters each article has) |
+| app\controllers\cars_controller.rb | contains the methods: index (for displaying all cars in database), show (for displaying a specific car details given provided id from car_params), new (creates a new unsaved record and generates the create car form in the views), create (inserts the user input to the database), car_params (defines the car parameters) |
+| app\controllers\welcome_controller.rb | defines method "index" which redirects the browser to **welcome\index.html.erb** upon reaching localhost:3000 |
 
 
 ### Models
 | filename | description |
 | :---         |     :---:      |
-| app\models\application_record.rb | ? |
-| app\models\article.rb | ? |
-| app\models\car.rb | ? |
-| app\models\user.rb | ? |
+| app\models\application_record.rb | inherits from ActiveRecord::Base, which defines a number of helpful methods |
+| app\models\article.rb | defines article validations (empty, as there are no requirements for articles) |
+| app\models\car.rb | defines validations for car, that includes: title exists (which is also validated on client side), avatar (photo) exists, that the uploaded photo is an image mime type, with the extensions jpeg,gif,png |
+| app\models\user.rb | defines user validations, that includes: devise (user can register, be confirmed, be remembered, be validated), defines an array "role" that is either user or admin, defines role for user, defines roles for select box using humanize (for capitalization), and defines that user does not need to be confirmed via email |
 
 ### Route
 | filename | description |
@@ -60,5 +59,6 @@
 | app\views\devise\registrations\edit.html.erb | edit profile page for current user |
 | app\views\devise\sessions\new.html.erb | log in page for existing user |
 | app\views\layouts\application.html.erb | top navbar that displays either current users username if signed in, or 'sign up' and 'log in' links |
+
 
 
