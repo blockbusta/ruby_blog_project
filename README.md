@@ -7,4 +7,5 @@
 4. `yarn install`
 6. `rake db:migrate`
 7. `rails s`
-6. app should be visible at localhost:3000
+6. app should be visible at <strong>localhost:3000</strong>
+
