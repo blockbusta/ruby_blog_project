@@ -1,5 +1,3 @@
-# itay_ruby_assignment
-
 ## Installation
 1. `git clone https://github.com/abasukar/itay_ruby_assignment.git`
 2. `rvm install ruby-2.6.5`
